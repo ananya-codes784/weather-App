@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  Background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  overflow: hidden;
+}
+
+/*  Main Box */
+.box {
+  position: relative;
+  width: 30vw;
+  height: 70vh;
+  min-width: 280px;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 2rem;
+  overflow: hidden;
+}
+
+/*  Input Field */
+.inputData {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.inputFeild {
+  width: 60%;
+  padding: 0.8rem 1rem;
+
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+
+  font-size: 1.2rem;
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/*  Error Message (optional future use) */
+.errorMsg {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+/*  WAVE EFFECT */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150%;
+  height: 100px;
+
+  background: rgba(221, 219, 220, 0.3);
+  border-radius: 40%;
+
+  animation: wave 10s linear infinite;
+}
+
+/* Extra layers */
+.wave2 {
+  animation: wave 15s linear infinite reverse;
+  opacity: 0.5;
+}
+
+.wave3 {
+  animation: wave 20s linear infinite;
+  opacity: 0.3;
+}
+
+/* Animation */
+@keyframes wave {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .box {
+    width: 40vw;
+    height: 70vh;
+  }
+}
+
+/*  Tablet */
+@media (max-width: 768px) {
+  .box {
+    width: 60vw;
+    height: 70vh;
+  }
+
+  .inputFeild {
+    width: 70%;
+    font-size: 1rem;
+  }
+}
+
+/*  Mobile */
+@media (max-width: 480px) {
+  .box {
+    width: 90vw;
+    height: 75vh;
+  }
+
+  .inputFeild {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+}
+
+/* 🌤️ Weather Info Section */
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -40%);
+  text-align: center;
+
+  color: #2b2b2b;
+  width: 100%;
+}
+
+/*  Location */
+.location {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Icon spacing */
+.location i {
+  margin-right: 8px;
+  color: #000000;
+}
+
+/*  Temperature */
+.temp {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/*  Min Max */
+.tempmin_max {
+  font-size: 1.1rem;
+  
+  color: rgb(50, 50, 50);
+}
+
+.location {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.data-not-found{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #cf2727;
+
+  width: 100%;
+ 
+}
